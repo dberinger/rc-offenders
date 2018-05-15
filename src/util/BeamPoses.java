@@ -21,8 +21,8 @@ public class BeamPoses {
     
   private static final double [][] Poses = 
 {
-        {-4.5, 0.0, 0.0}, //player 1 - goalie
-        {-3.5, 1.0, 0.0}, //player 2 - defender/attacker
+        {-1, 0.0, 0.0}, //player 1 - attacker
+        {-1, 1.0, 0.0}, //player 2 - attacker
     };
  
   public static double getX(int i) {
