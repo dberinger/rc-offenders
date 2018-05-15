@@ -83,7 +83,7 @@ public class Agent_SoccerTeam {
    identity.
    */
   final String id = "0";
-  final String team = "RC_Def"; //short for Robotics Condition Defenders
+  final String team = "RC_Off"; //short for Robotics Condition Offenders
   
   /** If the player id is set to "0",the "beam"-coordinates given below are
    overwritten by the server according to the definitions in the 
