@@ -57,7 +57,7 @@ public class SoccerTeamThinking {
      *
      * Must be updated for new or changing roles.
      */
-    SimpleGoalie role1;
+    SimpleAttacker role1;
     SimpleAttacker role2;
     SimpleSoccer role3;
     SimpleSoccer_withKick role4;
@@ -89,7 +89,7 @@ public class SoccerTeamThinking {
          * The opponent goal is the right one (with oppGoalLPost = G1R) if the
          * team starts from the left side. It is the left one (with oppGoalLPost
          * = G2R from the players view) if the team starts on the right side.
-         * The teamside is inferred after initialization in ServerCommunication.
+         * The team side is inferred after initialization in ServerCommunication.
          */
         HashMap<FieldConsts.FlagID, FlagModel> flags = this.localView.getFlags();
         /**
@@ -138,7 +138,7 @@ public class SoccerTeamThinking {
          */
         switch (playerNumber) {
             case "1":
-                role1 = new SimpleGoalie(motion, percIn, log);
+                role1 = new SimpleAttacker(motion, percIn, log);
                 break;
             case "2":
                 role2 = new SimpleAttacker(motion, percIn, log);
@@ -149,15 +149,7 @@ public class SoccerTeamThinking {
             case "4":
                 role4 = new SimpleSoccer_withKick(motion, percIn, log);
                 break;
-
-            /**
-             * // case "5": break; // case "6": break; // case "7": break; //
-             * case "8": break; // case "9": break; // case "10": break; // case
-             * "11": break;
-             *
-             *
-             *
-             */
+            
             default:
                 role_d = new SimpleSoccer(motion, percIn, log);
         }
@@ -182,15 +174,7 @@ public class SoccerTeamThinking {
             case "4":
                 role4.decide();
                 break;
-            /**
-             * no role specified up to now:
-             *
-             * case "5": role5.decide(); break; case "6": role6.decide(); break;
-             * case "7": role7.decide(); break; case "8": role8.decide(); break;
-             * case "9": role9.decide(); break; case "10": role10.decide();
-             * break; case "11": role11.decide(); break;
-             *
-             */
+                
             default:
                 role_d.decide();
         }
